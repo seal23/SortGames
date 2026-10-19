@@ -1,11 +1,15 @@
-using UnityEngine;
-using TMPro;
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 
 public class SimpleSwap : MonoBehaviour
 {
     private Potion selected;
     private bool isAnimating = false;
+
+    [Header("Chọn màng chơi")]
+    public int lv = 0;
 
     [Header("UI References")]
     public TextMeshProUGUI statusText; 
@@ -17,13 +21,20 @@ public class SimpleSwap : MonoBehaviour
     [Header("Chọn 2 lọ A, B")]
     public Potion potionA;
     public Potion potionB;
-    
+
+    [Header("Đưa vào danh sách các lọ")]
+    public List<Potion> allPotions;
+
     private int firstValueA, firstValueB;
     void Start()
     {
-        if (statusText != null) statusText.text = "Hãy chọn lọ nguồn (có nước)";
-        firstValueA = potionA.value;
-        firstValueB = potionB.value;
+        if (statusText != null) statusText.text = "Hãy chọn một lọ để bắt đầu";
+        if (lv == 0)
+        {
+            firstValueA = potionA.value;
+            firstValueB = potionB.value;
+        }
+      
     }
 
 
@@ -141,14 +152,51 @@ public class SimpleSwap : MonoBehaviour
 
         isAnimating = false;
 
-        CheckWinCondition();
+        CheckWinCondition(lv);
     }
 
-    void CheckWinCondition()
+    void CheckWinCondition(int lv)
     {
-        if ((potionA.value == firstValueB) && (potionB.value == firstValueA))
+        if (lv == 0)
         {
-            statusText.text = "<color=green>CHÚC MỪNG! BẠN ĐÃ HOÁN ĐỔI THÀNH CÔNG!</color>";
+            if ((potionA.value == firstValueB) && (potionB.value == firstValueA))
+            {
+                statusText.text = "<color=green>CHÚC MỪNG! BẠN ĐÃ HOÁN ĐỔI THÀNH CÔNG!</color>";
+            }
         }
+        else if (lv == 1)
+        {
+            bool isSorted = true;
+            // Kiểm tra xem 5 lọ đầu tiên (hoặc bất kỳ lọ nào có nước) có tăng dần không
+            // Lọ rỗng cuối cùng không tính, nhưng các lọ có nước phải xếp đúng
+            List<int> currentValues = new List<int>();
+            foreach (var p in allPotions)
+            {
+                if (p.hasWater) currentValues.Add(p.value);
+            }
+
+            // Nếu chưa đủ 5 lọ có nước thì chưa thắng
+            if (currentValues.Count < 5) return;
+
+            for (int i = 0; i < currentValues.Count - 1; i++)
+            {
+                if (currentValues[i] > currentValues[i + 1])
+                {
+                    isSorted = false;
+                    break;
+                }
+            }
+
+            if ((isSorted) && (allPotions[5].hasWater == false))
+            {
+                statusText.text = "<color=green>CHÚC MỪNG! BẠN ĐÃ SẮP XẾP ĐÚNG THỨ TỰ!</color>";
+                //isAnimating = true; // Khóa game khi thắng
+            }
+            else
+            {
+                statusText.text = "Vẫn chưa đúng thứ tự, hãy tiếp tục!";
+            }
+        }
+        
     }
 }

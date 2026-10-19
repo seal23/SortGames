@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 66e48b3e9da17e84f9558b43f77b2503
+  - enabled: 1
+    path: Assets/Scenes/LevelSwap.unity
+    guid: 2745c4200ad62fb4c9cfd6d85d0ebfab
+  - enabled: 1
+    path: Assets/Scenes/HumanSort.unity
+    guid: d2f50eef015c7724f874be44d6f655f4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e8002b87f01d03c4cb5b305a6ed53c39, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}

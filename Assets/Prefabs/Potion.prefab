@@ -548,6 +548,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8222230356763889550}
     m_Modifications:
+    - target: {fileID: 2101532766753331577, guid: 7a16bf3e2653ad74fa9d9f8f6acc1bff, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c5d81214b2af0493082fef7a9ef0dca2, type: 2}
     - target: {fileID: 4243267189517701943, guid: 7a16bf3e2653ad74fa9d9f8f6acc1bff, type: 3}
       propertyPath: m_Name
       value: VFX_Bottle_Fill

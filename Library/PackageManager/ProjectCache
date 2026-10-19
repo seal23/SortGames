@@ -5,22 +5,22 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639044100795937758
-    m_Hash: 165093368
+      ticks: 639103790151221338
+    m_Hash: 836460715
   m_LockFileStatus:
     m_FilePath: D:/GamesWorkSpace/UnityProjects/SortGames/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639044100909780035
-    m_Hash: 3315133162
+      ticks: 639103790242671395
+    m_Hash: 3075011904
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/GamesWorkSpace/UnityProjects/SortGames/Packages
-m_EditorVersion: 6000.3.4f1 (fdd3b8998ec4)
+m_EditorVersion: 6000.3.6f1 (bbb010bdb8a3)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.11.2
   testable: 0
@@ -129,9 +129,15 @@ m_ResolvedPackages:
     - 2.10.1
     - 2.10.2
     - 2.11.2
+    - 2.11.3
+    - 2.11.4
+    - 2.12.4
     compatible:
     - 2.11.2
-    recommended: 2.11.2
+    - 2.11.3
+    - 2.11.4
+    - 2.12.4
+    recommended: 2.11.4
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -283,7 +289,7 @@ m_ResolvedPackages:
   - name: com.unity.editorcoroutines
     version: 1.0.1
   - name: com.unity.performance.profile-analyzer
-    version: 1.2.4
+    version: 1.3.1
   - name: com.unity.testtools.codecoverage
     version: 1.2.7
   - name: com.unity.settings-manager
@@ -349,12 +355,12 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-- packageId: com.unity.inputsystem@1.17.0
+- packageId: com.unity.inputsystem@1.18.0
   testable: 0
   isDirectDependency: 1
-  version: 1.17.0
+  version: 1.18.0
   source: 1
-  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.inputsystem@02433b2481ab
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.inputsystem@57d0e36f6123
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -430,10 +436,11 @@ m_ResolvedPackages:
     - 1.16.0
     - 1.17.0
     - 1.18.0
+    - 1.19.0
     compatible:
-    - 1.17.0
     - 1.18.0
-    recommended: 1.17.0
+    - 1.19.0
+    recommended: 1.18.0
     deprecated: []
   dependencies:
   - name: com.unity.modules.uielements
@@ -475,16 +482,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638997348789550000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.17/manual/index.html
+  datePublishedTicks: 639039807602510000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.18/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/InputSystem.git
-    revision: 672e42ce4f76a7086fb09e24d5236e5f71336bd6
+    revision: c0d61169c3ccce912ce6a8dec13a30e6e35fdeb8
     path: 
   unityLifecycle:
-    version: 1.17.0
+    version: 1.18.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -495,19 +502,16 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Changed\n- Project-Wide Input Actions support can
-    no longer be compiled out (removed the `UNITY_INPUT_SYSTEM_PROJECT_WIDE_ACTIONS`
-    define). (ISX-2397)\n- Removed code that had to do with Unity versions older
-    than Unity 2022.3 LTS. (ISX-2396)\n- Auto-save on focus lost can no longer be
-    compiled out (ISX-2397)\n- Deprecated the `USE_IMGUI_EDITOR_FOR_ASSETS` feature
-    option (ISX-2397)\n\n### Fixed\n- An issue where a UITK MouseEvent was triggered
-    when changing from Scene View to Game View in the Editor has been fixed. [ISXB-1671](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1671)\n-
-    Fix documentation error in file AndroidGameController.cs mentioning a wrong controller.
-    [DOCATT-9806]\n- Deferred auto-registration of processors, interactions and composite
-    binding types referenced by `InputActionAsset`\n  to only happen once when an
-    unresolved type reference is found in an action definition. This avoids reflective\n 
-    type loading from assemblies for all cases where the Input System is not extended.
-    (ISXB-1766)."}'
+  upmReserved: '{"changelog":"### Changed\n\n- Updated documentation to reflect that
+    the OnMouse MonoBehaviour events are now supported in Unity 6.4 and above.\n-
+    Updated the supported devices documentation to clarify that touchscreens are
+    supported on Linux.\n- Updated documentation to reflect PS5 controller support
+    on Linux.\n\n### Fixed\n\n- Fixed add buttons use add icon in input actions window
+    (ISX-2340)\n- Fixed warnings being generated on Unity 6.4 and 6.5. (ISX-2395).\n-
+    Fixed extra empty lines being displayed in the control binding list when mouse
+    buttons are pressed [ISXB-1677](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1677)\n-
+    Fixed InputActionReference not being set when attempting to set it on a Prefab
+    or ScriptableObject [ISXB-1787](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1787)"}'
   signature:
     status: 1
     reason: Signature is ok
@@ -521,10 +525,10 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 02433b2481abc5c0063956fdc211f3d8c777447f
+  fingerprint: 57d0e36f61231bc5a2579f37d81bf6fa02f40adc
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.17.0
+    minimumPackageVersion: 1.18.0
     minimumUnityVersion: 2022.3
   compliance:
     status: 0
@@ -749,9 +753,13 @@ m_ResolvedPackages:
     - 1.8.8
     - 1.8.9
     - 1.8.10
+    - 1.8.11
+    - 1.8.12
     compatible:
     - 1.8.10
-    recommended: 1.8.10
+    - 1.8.11
+    - 1.8.12
+    recommended: 1.8.12
     deprecated: []
   dependencies:
   - name: com.unity.modules.audio
@@ -845,7 +853,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.ugui@1890c14c96ff
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.ugui@b9d1dd437cb9
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: uGUI
@@ -936,7 +944,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 1890c14c96ff76161b5301b2798bcfba3176042a
+  fingerprint: b9d1dd437cb9402dbac4aa695ff758f7808c3551
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
@@ -1003,9 +1011,13 @@ m_ResolvedPackages:
     - 1.9.7
     - 1.9.8
     - 1.9.9
+    - 1.9.10
+    - 1.9.11
     compatible:
     - 1.9.9
-    recommended: 1.9.9
+    - 1.9.10
+    - 1.9.11
+    recommended: 1.9.11
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -1090,7 +1102,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.accessibility
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.accessibility
   assetPath: Packages/com.unity.modules.accessibility
   name: com.unity.modules.accessibility
   displayName: Accessibility
@@ -1178,7 +1190,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.adaptiveperformance
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.adaptiveperformance
   assetPath: Packages/com.unity.modules.adaptiveperformance
   name: com.unity.modules.adaptiveperformance
   displayName: Adaptive Performance
@@ -1272,7 +1284,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.ai
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1360,7 +1372,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.androidjni
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1447,7 +1459,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.animation
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1535,7 +1547,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.assetbundle
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1623,7 +1635,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.audio
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1711,7 +1723,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.cloth
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1803,7 +1815,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.director
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -1899,7 +1911,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.imageconversion
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -1987,7 +1999,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2075,7 +2087,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2163,7 +2175,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.particlesystem
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2251,7 +2263,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2339,7 +2351,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.physics2d
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2427,7 +2439,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.screencapture
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2519,7 +2531,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.terrain
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2607,7 +2619,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.terrainphysics
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2703,7 +2715,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.tilemap
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -2794,7 +2806,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.ui
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2882,7 +2894,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.uielements
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -2990,7 +3002,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.umbra
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -3078,7 +3090,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.unityanalytics
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3173,7 +3185,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3261,7 +3273,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3357,7 +3369,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.unitywebrequestaudio
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -3453,7 +3465,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.unitywebrequesttexture
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -3549,7 +3561,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.unitywebrequestwww
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -3661,7 +3673,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vectorgraphics
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.vectorgraphics
   assetPath: Packages/com.unity.modules.vectorgraphics
   name: com.unity.modules.vectorgraphics
   displayName: Vector Graphics
@@ -3768,7 +3780,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.vehicles
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -3860,7 +3872,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.video
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -3960,7 +3972,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.vr
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -4063,7 +4075,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.wind
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -4151,7 +4163,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.xr
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -4251,7 +4263,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.subsystems
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -4343,7 +4355,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Hub\Unity Editor\6000.3.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.hierarchycore
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.modules.hierarchycore
   assetPath: Packages/com.unity.modules.hierarchycore
   name: com.unity.modules.hierarchycore
   displayName: Hierarchy Core
@@ -4474,9 +4486,11 @@ m_ResolvedPackages:
     - 2.0.23
     - 2.0.25
     - 2.0.26
+    - 2.0.27
     compatible:
     - 2.0.26
-    recommended: 2.0.26
+    - 2.0.27
+    recommended: 2.0.27
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -4622,9 +4636,11 @@ m_ResolvedPackages:
     - 3.0.36
     - 3.0.37
     - 3.0.38
+    - 3.0.39
     compatible:
     - 3.0.38
-    recommended: 3.0.38
+    - 3.0.39
+    recommended: 3.0.39
     deprecated:
     - 3.0.37
   dependencies:
@@ -4794,12 +4810,12 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-- packageId: com.unity.performance.profile-analyzer@1.2.4
+- packageId: com.unity.performance.profile-analyzer@1.3.1
   testable: 0
   isDirectDependency: 0
-  version: 1.2.4
+  version: 1.3.1
   source: 1
-  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.performance.profile-analyzer@0516b3a47353
+  resolvedPath: D:\GamesWorkSpace\UnityProjects\SortGames\Library\PackageCache\com.unity.performance.profile-analyzer@311968ce4be7
   assetPath: Packages/com.unity.performance.profile-analyzer
   name: com.unity.performance.profile-analyzer
   displayName: Profile Analyzer
@@ -4833,9 +4849,15 @@ m_ResolvedPackages:
     - 1.2.2
     - 1.2.3
     - 1.2.4
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
     compatible:
-    - 1.2.4
-    recommended: 1.2.4
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    recommended: 1.3.3
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -4855,16 +4877,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638950052407930000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@1.2/manual/index.html
+  datePublishedTicks: 639044511012190000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@1.3/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.performance.profile-analyzer.git
-    revision: 835e61d94bd201d0dea5763dff75e86b6b61de29
+    revision: 248e5ebe5686d9a3df7dd7cc9acbd49808730fe5
     path: 
   unityLifecycle:
-    version: 1.2.4
+    version: 1.3.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4875,8 +4897,7 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n\n* Fixed minimum supported version in documentation.\n*
-    Fixed PROFB-199; Unchecking ''Hide Removed Markers'' doesn''t work."}'
+  upmReserved: '{"changelog":"### Fixed\n* Fixed documentation error"}'
   signature:
     status: 1
     reason: Signature is ok
@@ -4890,11 +4911,11 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 0516b3a4735349f9de36a7f42feb9f0c92ef7bfa
+  fingerprint: 311968ce4be7b8c45e37a6c865e744fb1b7a7b3e
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.2.4
-    minimumUnityVersion: 2020.3
+    minimumPackageVersion: 1.3.1
+    minimumUnityVersion: 2021.3
   compliance:
     status: 0
     violation:
@@ -5057,8 +5078,10 @@ m_ResolvedPackages:
     - 1.2.5
     - 1.2.6
     - 1.2.7
+    - 1.3.0
     compatible:
     - 1.2.7
+    - 1.3.0
     recommended: 1.2.7
     deprecated: []
   dependencies:
@@ -5337,4 +5360,4 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-m_BuiltInPackagesHash: 691aaf43edb3f61835dfad6b811ff5fbfae32e11
+m_BuiltInPackagesHash: 074fafdb01ec917b910a28dd53b145c6e6cd9e5c
